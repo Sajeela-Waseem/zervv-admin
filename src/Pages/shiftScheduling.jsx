@@ -11,7 +11,7 @@ export default function ShiftScheduling() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center ">
+    <div className="min-h-screen flex flex-col items-center">
       {/* ===== HEADER ===== */}
       <header className="w-full bg-[#00303C] text-white text-center py-6">
         <h1 className="text-3xl font-bold uppercase tracking-wide">
@@ -23,9 +23,9 @@ export default function ShiftScheduling() {
       </header>
 
       {/* ===== WHITE CONTENT CARD ===== */}
-      <div className="bg-white w-full rounded-lg  border border-gray-200 p-10 ">
+      <div className="bg-white w-full rounded-lg border border-gray-200 p-10">
         {/* ===== MEMBER SELECT ===== */}
-        <div className="flex  mb-10">
+        <div className="flex mb-10">
           <select className="border border-gray-300 text-[#00303C] px-6 py-3 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-[#1FE607] shadow-sm w-[250px]">
             <option>Member Name</option>
             <option>Arslan Zubair</option>
@@ -36,19 +36,18 @@ export default function ShiftScheduling() {
 
         {/* ===== TABLE HEADING ===== */}
         <div className="flex gap-3 mb-4 text-[#00303C] font-semibold">
-          <span className="w-[120px] ">Day</span>
+          <span className="w-[120px]">Day</span>
           <span className="w-[150px]">Start</span>
           <span className="w-[40px]"></span>
           <span className="w-[150px] text-center">End</span>
-          <span className="w-[100px] text-center"></span>
         </div>
 
         {/* ===== SCHEDULE TABLE ===== */}
-        <div className="space-y-6">
+        <div className="space-y-6 mb-10">
           {days.map((day, i) => (
             <div key={i} className="flex gap-3">
               {/* Day name */}
-              <span className="w-[120px] text-[#00303C] font-medium ">
+              <span className="w-[120px] text-[#00303C] font-medium">
                 {day}
               </span>
 
@@ -70,13 +69,15 @@ export default function ShiftScheduling() {
                 placeholder="End time"
                 className="border border-gray-300 rounded-md px-4 py-2 text-[#00303C] w-[150px] text-center focus:outline-none focus:ring-2 focus:ring-[#1FE607]"
               />
-
-              {/* Save button */}
-              <button className="bg-[#1FE607] text-[#00303C] font-semibold px-6 py-2 rounded-md hover:bg-[#19c606] transition">
-                Save
-              </button>
             </div>
           ))}
+        </div>
+
+        {/* ===== SINGLE SAVE BUTTON (BOTTOM RIGHT) ===== */}
+        <div className="flex justify-end">
+          <button className="bg-[#1FE607] text-[#00303C] font-semibold px-10 py-3 rounded-md hover:bg-[#19c606] transition">
+            Save
+          </button>
         </div>
       </div>
     </div>

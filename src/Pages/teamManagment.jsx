@@ -15,7 +15,7 @@ export default function TeamManagment() {
       </header>
 
       {/* ===== BUTTONS ===== */}
-      <div className="flex flex-col gap-6 items-center justify-center flex-1 ">
+      <div className="flex flex-col gap-6 items-center justify-center flex-1">
         <button
           onClick={() => setActiveModal("insert")}
           className="flex items-center justify-center gap-3 w-64 bg-white text-[#022C43] font-bold px-10 py-3 rounded-md border border-[#022C43] hover:bg-[#1FE607] hover:text-[#022C43] transition"
@@ -61,22 +61,45 @@ export default function TeamManagment() {
 
             {/* Modal Form */}
             <form className="flex flex-col gap-5 items-center">
-              <div className="flex flex-col-2 gap-5">
-            <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]"
-              />
-              </div>
-              
+              {activeModal === "insert" ? (
+                // ===== Insert User Fields =====
+                <div className="flex flex-col-2 gap-5 ">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]"
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]"
+                  />
+                </div>
+              ) : (
+                // ===== Update/Delete User Dropdowns =====
+                <div className="flex flex-col gap-5 w-full">
+                  <select className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]">
+                    <option>Select User</option>
+                    <option>Arslan Zubair</option>
+                    <option>Maryam Khan</option>
+                    <option>Ali Raza</option>
+                  </select>
+
+                  {activeModal === "update" && (
+                    <select className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#1FE607]">
+                      <option>Select New Role</option>
+                      <option>Admin</option>
+                      <option>Manager</option>
+                      <option>Employee</option>
+                    </select>
+                  )}
+                </div>
+              )}
+
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#1FE607] text-[#022C43] font-bold py-2 rounded-md hover:bg-[#1FE607] transition"
+                className="w-full bg-[#1FE607] text-[#022C43] font-bold py-2 rounded-md hover:bg-[#19c606] transition"
               >
                 {activeModal === "insert"
                   ? "INSERT"
