@@ -7,11 +7,11 @@ export default function TeamManagment() {
   return (
     <div className="bg-white text-[#022C43] min-h-screen flex flex-col items-center">
       {/* ===== HEADER ===== */}
-      <header className="w-full bg-[#00303C] text-white py-6 text-center shadow-md">
+      <header className="w-full bg-[#00303C] text-white py-3 text-center shadow-md">
         <h1 className="text-3xl font-bold uppercase tracking-wide">
           Team Management
         </h1>
-        <p className="text-gray-300 mt-2">View and manage Team Members</p>
+        <p className="text-gray-300">View and manage Team Members</p>
       </header>
 
       {/* ===== BUTTONS ===== */}

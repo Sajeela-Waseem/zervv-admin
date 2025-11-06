@@ -4,11 +4,11 @@ export default function ProjectAssign() {
   return (
     <div className="min-h-screen flex flex-col items-center ">
       {/* ===== HEADER ===== */}
-      <header className="w-full bg-[#00303C] text-white text-center py-6">
+      <header className="w-full bg-[#00303C] text-white text-center py-3">
         <h1 className="text-3xl font-bold uppercase tracking-wide">
           Project Assign
         </h1>
-        <p className="text-gray-300 mt-2">Assign and Manage Projects</p>
+        <p className="text-gray-300 ">Assign and Manage Projects</p>
       </header>
 
       {/* ===== WHITE CONTENT CARD ===== */}

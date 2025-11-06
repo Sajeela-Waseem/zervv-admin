@@ -6,11 +6,11 @@ export default function MembersDashboard() {
       {/* Main Content */}
     
         {/* ===== Header ===== */}
-       <header className="w-full bg-[#00303C] text-white py-6 text-center shadow-md">
+       <header className="w-full bg-[#00303C] text-white py-3 text-center shadow-md">
         <h1 className="text-3xl font-bold uppercase tracking-wide">
          Memebers Dashboard
         </h1>
-        <p className="text-gray-300 mt-2">View and manage Team Members</p>
+        <p className="text-gray-300">View and manage Team Members</p>
       </header>
 
 

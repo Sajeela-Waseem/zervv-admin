@@ -13,11 +13,11 @@ export default function ShiftScheduling() {
   return (
     <div className="min-h-screen flex flex-col items-center">
       {/* ===== HEADER ===== */}
-      <header className="w-full bg-[#00303C] text-white text-center py-6">
+      <header className="w-full bg-[#00303C] text-white text-center py-3">
         <h1 className="text-3xl font-bold uppercase tracking-wide">
           Shift Scheduling
         </h1>
-        <p className="text-gray-300 mt-2">
+        <p className="text-gray-300">
           View and manage Members Shift Scheduling
         </p>
       </header>
