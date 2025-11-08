@@ -128,9 +128,20 @@ export default function Navbar() {
             <h4 className="font-semibold text-sm">Arslan Zubair</h4>
             <p className="text-xs text-gray-300">arslan@example.com</p>
           </div>
+   
           <FaSignOutAlt size={18} className="text-[#1FE607] cursor-pointer" />
         </div>
+               <button
+  onClick={() => {
+    localStorage.removeItem("isAuthenticated");
+    window.location.href = "/";
+  }}
+  className="mt-4 w-full px-4 py-2 bg-[#1FE607] text-[#00303C] rounded-md font-bold hover:bg-[#18c406]"
+>
+  Logout
+</button>
       </div>
+      
     </aside>
   );
 }
